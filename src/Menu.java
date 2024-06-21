@@ -55,12 +55,12 @@ public class Menu {
         System.out.print(
                 """
                 Escolha uma opção:
-                1 - Real brasileiro (BRL)
-                2 - Dólar americano (USD)
-                3 - Dólar canadense (CAD)
-                4 - Euro            (EUR)
-                5 - Iene japonês    (JPY)
-                6 - Renminbi chinês (CNY)
+                1 - Peso argentino      (ARS)
+                2 - Boliviano boliviano (BOB)
+                3 - Real brasileiro     (BRL)
+                4 - Peso chileno        (CLP)
+                5 - Peso colombiano     (COP)
+                6 - Dólar americano     (USD)
                 """
         );
     }
@@ -79,27 +79,27 @@ public class Menu {
 
         return switch (selecionarEscolhaMenu()) {
             case 1 -> {
-                while(menuConversorDestino("BRL"));
+                while(menuConversorDestino("ARS"));
                 yield false;
             }
             case 2 -> {
-                while(menuConversorDestino("USD"));
+                while(menuConversorDestino("BOB"));
                 yield false;
             }
             case 3 -> {
-                while(menuConversorDestino("CAD"));
+                while(menuConversorDestino("BRL"));
                 yield false;
             }
             case 4 -> {
-                while(menuConversorDestino("EUR"));
+                while(menuConversorDestino("CLP"));
                 yield false;
             }
             case 5 -> {
-                while(menuConversorDestino("JPY"));
+                while(menuConversorDestino("COP"));
                 yield false;
             }
             case 6 -> {
-                while(menuConversorDestino("CNY"));
+                while(menuConversorDestino("USD"));
                 yield false;
             }
             case 7 -> false;
@@ -119,22 +119,22 @@ public class Menu {
 
         switch (selecionarEscolhaMenu()) {
             case 1:
-                destino = "BRL";
+                destino = "ARS";
                 break;
             case 2:
-                destino = "USD";
+                destino = "BOB";
                 break;
             case 3:
-                destino = "CAD";
+                destino = "BRL";
                 break;
             case 4:
-                destino = "EUR";
+                destino = "CLP";
                 break;
             case 5:
-                destino = "JPY";
+                destino = "COP";
                 break;
             case 6:
-                destino = "CNY";
+                destino = "USD";
                 break;
             default:
                 System.out.println("Digite uma opção válida.");
